@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.collapsible {
+  background-color: #0575AF ;
+  color: black  ;
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: blue;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #113637;
+}
+ .split {
+  
+  height: 100%;
+  width: 30%;
+ 
+
+}
+    .split2 {
+  height: 100%;
+  width: 70%;
+
+}
+
+.left {
+height:600px  ;
+float: left;
+background-color: #0A233D;
+}
+
+/* Control the right side */
+.right {
+  height :600px;
+float: right;
+background-color: #F6F27D
+}
+
+img{
+ display: block;
+ margin-left:auto;
+  margin-right:auto;
+
+}
+
+.p{
+color:white;
+font-family:arial;
+font-style:italic;
+}
+.h1{
+color:white;
+}
+.h3{
+ color:  white ; 
+}
+h1{
+text-align:center ;
+c
+font-style: bold;
+}
+h3{
+margin-left:15px;
+font-family: arial;
+color:  white  ;
+
+}
+embed{  
+display: block;
+ margin-left:auto;
+  margin-right:auto;
+  margin-top: 50px; 
+  width:60%;
+}
+form{
+ margin-left: 320px;
+ margin-top: 50px;
+}
+</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div class="split left">
+  <h3  style="color:white;">Menu'</h3>  
+<button class="collapsible">Evento</button>
+<div class="content">
+<p class="p" > L'8 Settembre 2019 si esibira' in concerto il famoso cantante Travis Scott in piazza ad Altavilla Vicentina. 
+  Il prezzo del bliglietto e' di EURO 39,90 </p>  
+</div>
+<button class="collapsible" class="btn btn-primary">Contatti</button>
+<div class="content">
+  <p class="p" >  Per maggiori informazioni contattare Mario Rossi al 3452768901 oppure chiamate Serena al 3405678234.</p>
+</div>
+<button class="collapsible">Programma</button>
+<div class="content">
+  <p class="p" >Ore 21:30 : arrivo Travis Scott; ore 22.00 : firma copie; ore 23:30 : Inizio concerto.</p>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+<br>
+<embed src="https://www.youtube.com/embed/tgbNymZ7vqY">
+<!-- <script>
+function myFunction() {
+  location.replace("https://www.youtube.com/watch?v=6ONRf7h3Mdk") 
+}
+</script> -->
+</div>
+<div class="split2 right" >
+<h1 class="h1"> TRAVIS SCOTT AD ALTAVILLA </h1>
+<img  src="https://www.lascimmiapensa.com/wp-content/uploads/2018/08/Travis-Scott.jpg" width ="400"  >
+<br>
+<form name= "newForm" id="myForm" action="/action_page.php">
+<p style="font-style: bold" >Numero biglietti <input id="mytext"type="number" name="FirstName" value= 0 onchange = "myFunction3()"><br>
+<script>
+/*  document.getElementById("mytext").value = "0";*/
+</script>
+<button type="button" class="btn btn-success" onclick="myFunction()">Add</button>
+<button type="button" class="btn btn-danger"onclick="myFunction2()">Subtract</button>
+<script>
+  function myFunction()
+  {
+   document.getElementById("mytext").value ++;
+  }
+   function myFunction2()
+  {
+  if(document.getElementById("mytext").value >0)
+   document.getElementById("mytext").value --;
+  }
+  function myFunction3(){
+     document.newForm.action = "/action_page.php?numerobiglietti="+document.getElementById('mytext').value;
+
+  }
+</script>
+<input type="submit" value="Submit">
+</form>   
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

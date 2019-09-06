@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.collapsible {
+  background-color: #0575AF ;
+  color: black  ;
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: blue;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #113637;
+}
+ </style>
+<body>
+<script>
+var conversazioni['Gianni','Matteo','Alberto']
+var objMex = new Object() ,
+objMex.id="1";
+objMex.nome= "mexGianni";
+objMex.data = "31/08/2019";
+var objMex2 = new Object() ,
+objMex2.id= 2 ;
+objMex2.nome= "mexMatteo";
+objMex2.data =  "3/09/2019" ;
+var objMex3 = new Object() ,
+objMex3.id= 3 ;
+objMex3.nome= "mexAlberto";
+objMex3.data = "4/09/2019";
+var messaggi = new Array()
+messagi[0]=objMex;
+messagi[1]=objMex2;
+messagi[2]=objMex3;
+
+</script>
+<button class="collapsible">"" + conversazioni[0]</button>
+<div class="content">
+<p class="p" > L'8 Settembre 2019 si esibira' in concerto il famoso cantante Travis Scott in piazza ad Altavilla Vicentina. 
+  Il prezzo del bliglietto e' di EURO 39,90 </p>  
+</div>
+<button class="collapsible" >Contatti</button>
+<div class="content">
+  <p class="p" >  Per maggiori informazioni contattare Mario Rossi al 3452768901 oppure chiamate Serena al 3405678234.</p>
+</div>
+<button class="collapsible">Programma</button>
+<div class="content">
+  <p class="p" >Ore 21:30 : arrivo Travis Scott; ore 22.00 : firma copie; ore 23:30 : Inizio concerto.</p>
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+</body>
